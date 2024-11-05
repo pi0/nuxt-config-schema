@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v0.4.7
+
+[compare changes](https://github.com/nuxt-experiments/nuxt-config-schema/compare/v0.4.5...v0.4.7)
+
+### 🩹 Fixes
+
+- Remove `changelogen` from dependencies ([ef9a57a](https://github.com/nuxt-experiments/nuxt-config-schema/commit/ef9a57a))
+
+### 🏡 Chore
+
+- Update dependencies and lockfile ([9f69946](https://github.com/nuxt-experiments/nuxt-config-schema/commit/9f69946))
+- **release:** V0.4.6 ([45575ed](https://github.com/nuxt-experiments/nuxt-config-schema/commit/45575ed))
+- Update dependencies ([#7](https://github.com/nuxt-experiments/nuxt-config-schema/pull/7))
+
+### ❤️ Contributors
+
+- Daniel Roe ([@danielroe](http://github.com/danielroe))
+- Pooya Parsa ([@pi0](http://github.com/pi0))
+
 ## v0.4.6
 
 [compare changes](https://github.com/pi0/nuxt-config-schema/compare/v0.4.5...v0.4.6)
