@@ -11,7 +11,7 @@ import {
 import type { Schema, SchemaDefinition } from 'untyped'
 // @ts-ignore
 import untypedPlugin from 'untyped/babel-plugin'
-import jiti from 'jiti'
+import { createJiti } from 'jiti'
 
 export type NuxtConfigSchema = SchemaDefinition
 
@@ -57,9 +57,7 @@ export default defineNuxtModule({
     const virtualImports = await resolver.resolvePath(
       './runtime/virtual-imports'
     )
-    const _require = jiti(dirname(import.meta.url), {
-      esmResolve: true,
-      interopDefault: true,
+    const jiti = createJiti(dirname(import.meta.url), {
       cache: false,
       requireCache: false,
       alias: {
@@ -108,7 +106,7 @@ export default defineNuxtModule({
         if (filePath && existsSync(filePath)) {
           let loadedConfig: SchemaDefinition
           try {
-            loadedConfig = _require(filePath)
+            loadedConfig = await jiti.import(filePath, { default: true })
           } catch (err) {
             // eslint-disable-next-line no-console
             console.warn(
